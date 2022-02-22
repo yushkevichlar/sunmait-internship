@@ -1,1 +1,1 @@
-# sunmait-internship
+# Sunmait Technologies Internship
