@@ -1,6 +1,6 @@
 /*======================= FONTS =======================*/
 
-@import url("https:/./fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 @font-face {
 	font-family: Metropolis;
@@ -343,6 +343,7 @@ p strong {
 	box-shadow: none;
 	top: 0;
 	box-sizing: border-box;
+	cursor: pointer;
 }
 
 .projects__item:hover {
@@ -372,6 +373,11 @@ p strong {
 .project__text p {
 	margin: 16px 0;
 	line-height: 1.7em;
+}
+
+.projects__no-results {
+	text-align: center;
+	width: 100%;
 }
 
 /*==================== MEDIA QUERIES ====================*/
