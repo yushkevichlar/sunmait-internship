@@ -72,23 +72,23 @@ window.addEventListener("DOMContentLoaded", () => {
 		hamburger.classList.add("js-display-block");
 		mobileNavClose.classList.toggle("js-display-block");
 
-		// let mobWhy = document.getElementById("mobile-why-items");
-		// mobWhy.classList.add("js-display-none");
+		let mobWhy = document.getElementById("mobile-why-items");
+		mobWhy.classList.add("js-display-none");
 
-		// let mobLearn = document.getElementById("mobile-learn-items");
-		// mobLearn.classList.add("js-display-none");
+		let mobLearn = document.getElementById("mobile-learn-items");
+		mobLearn.classList.add("js-display-none");
 
-		// let mobProject = document.getElementById("mobile-project-items");
-		// mobProject.classList.add("js-display-none");
+		let mobProject = document.getElementById("mobile-project-items");
+		mobProject.classList.add("js-display-none");
 
-		// let mobCommunity = document.getElementById("mobile-community-items");
-		// mobCommunity.classList.add("js-display-none");
+		let mobCommunity = document.getElementById("mobile-community-items");
+		mobCommunity.classList.add("js-display-none");
 
-		// for (let elem of document.getElementsByClassName("mobile-nav-arrow")) {
-		// 	if (elem.classList.contains("flipped")) {
-		// 		elem.classList.remove("flipped");
-		// 	}
-		// }
+		for (let elem of document.getElementsByClassName("mobile-nav-arrow")) {
+			if (elem.classList.contains("flipped")) {
+				elem.classList.remove("flipped");
+			}
+		}
 	});
 
 	mobileNavContainer.onclick = e => {
