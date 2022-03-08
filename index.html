@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Spring | Projects</title>
 	<link rel="shortcut icon" href="#">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -21,90 +22,48 @@
 				<ul class="nav__items">
 					<li>
 						<div class="nav__dropdown">
-							<span>Why Spring</span>
 							<div class="nav__dropdown-arrow"></div>
 							<div class="nav__dropdown-target nav__why-target"></div>
 							<div class="nav__dropdown-content">
-								<ul class="nav__dropdown-content-list">
-									<li><a href="#">Overview</a></li>
-									<li><a href="#">Microservices</a></li>
-									<li><a href="#">Reactive</a></li>
-									<li><a href="#">Event Driven</a></li>
-									<li><a href="#">Cloud</a></li>
-									<li><a href="#">Web Applications</a></li>
-									<li><a href="#">Serverless</a></li>
-									<li><a href="#">Batch</a></li>
-								</ul>
+								<ul class="nav__dropdown-content-list"></ul>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="nav__dropdown">
-							<span>Learn</span>
 							<div class="nav__dropdown-arrow"></div>
 							<div class="nav__dropdown-target nav__learn-target"></div>
 							<div class="nav__dropdown-content">
-								<ul class="nav__dropdown-content-list">
-									<li><a href="#">Overview</a></li>
-									<li><a href="#">Quickstart</a></li>
-									<li><a href="#">Guides</a></li>
-									<li><a href="#">Blog</a></li>
-								</ul>
+								<ul class="nav__dropdown-content-list"></ul>
 							</div>
 						</div>
 					</li>
 					<li>
 						<div class="nav__dropdown">
-							<span>Projects</span>
 							<div class="nav__dropdown-arrow"></div>
 							<div class="nav__dropdown-target nav__project-target"></div>
 							<div class="nav__dropdown-content">
-								<ul class="nav__dropdown-content-list">
-									<li><a href="#">Overview</a></li>
-									<li><a href="#">Spring Boot</a></li>
-									<li><a href="#">Spring Framework</a></li>
-									<li><a href="#">Spring Cloud</a></li>
-									<li><a href="#">Spring Cloud Data Flow</a></li>
-									<li><a href="#">Spring Data</a></li>
-									<li><a href="#">Spring Integration</a></li>
-									<li><a href="#">Spring Batch</a></li>
-									<li><a href="#">Spring Security</a></li>
-									<li><a class="nav__dropdown-content_blue" href="#">View all projects</a></li>
-									<li class="nav__dropdown-content-subtitle">Development Tools</li>
-									<li><a href="#">Spring Tools 4</a></li>
-									<li><a href="#">Spring Initializr
-											<svg class="nav__dropdown-link-icon" xmlns="http://www.w3.org/2000/svg"
-												viewBox="0 0 16 16">
-												<polyline points="15 10.94 15 15 1 15 1 1 5.06 1" fill="none"
-													stroke="currentColor" stroke-miterlimit="10" stroke-width="2" />
-												<polyline points="8.93 1 15 1 15 7.07" fill="none" stroke="currentColor"
-													stroke-miterlimit="10" stroke-width="2" />
-												<line x1="15" y1="1" x2="8" y2="8" fill="none" stroke="currentColor"
-													stroke-miterlimit="10" stroke-width="2" />
-											</svg>
-										</a>
-									</li>
-								</ul>
+								<ul id="nav__dropdown-content-list-projects" class="nav__dropdown-content-list"></ul>
 							</div>
 						</div>
 					</li>
 					<li>
-						<a class="nav__items-link" href="#">Training</a>
+						<div class="nav__dropdown">
+							<ul class="nav__dropdown-content-list  js-display-none"></ul>
+						</div>
 					</li>
 					<li>
-						<a class="nav__items-link" href="#">Support</a>
+
+						<div class="nav__dropdown">
+							<ul class="nav__dropdown-content-list js-display-none"></ul>
+						</div>
 					</li>
 					<li>
 						<div class="nav__dropdown">
-							<span>Community</span>
 							<div class="nav__dropdown-arrow"></div>
 							<div class="nav__dropdown-target nav__community-target"></div>
 							<div class="nav__dropdown-content">
-								<ul class="nav__dropdown-content-list">
-									<li><a href="#">Overview</a></li>
-									<li><a href="#">Events</a></li>
-									<li><a href="#">Team</a></li>
-								</ul>
+								<ul class="nav__dropdown-content-list"></ul>
 							</div>
 						</div>
 					</li>
@@ -114,12 +73,34 @@
 
 		<!--==================== MOBILE NAV ====================-->
 		<div class="nav__mobile">
-			<div id="hamburger" class="nav__mobile-hamburger">
+			<div class="nav__mobile-hamburger">
 				<div class="nav__mobile-hamburger-bar"></div>
 				<div class="nav__mobile-hamburger-bar"></div>
 				<div class="nav__mobile-hamburger-bar"></div>
 			</div>
+			<div class='nav__mobile-close'>
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+					y="0px" viewBox="0 0 14.6 14.6" style="enable-background:new 0 0 14.6 14.6;" xml:space="preserve">
+					<line class="st0" x1="1.5" y1="1.5" x2="13.1" y2="13.1" />
+					<line class="st0" x1="13.1" y1="1.5" x2="1.5" y2="13.1" />
+				</svg>
+			</div>
 		</div>
+		<nav class='nav__mobile-items'>
+			<div class='nav__mobile-container'>
+				<div id='mobile-why' class='mobile-category'></div>
+				<div id='mobile-why-items' class='mobile-expanded-category'></div>
+				<div id='mobile-learn' class='mobile-category'></div>
+				<div id='mobile-learn-items' class='mobile-expanded-category'></div>
+				<div id='mobile-projects' class='mobile-category'></div>
+				<div id='mobile-project-items' class='mobile-expanded-category'></div>
+				<a id='mobile-training' href='#' class='mobile-link block'></a>
+				<a id='mobile-support' href='#' class='mobile-link block'></a>
+				<div id='mobile-community' class='mobile-category'></div>
+				<div id='mobile-community-items' class='mobile-expanded-category'></div>
+
+			</div>
+		</nav>
 	</header>
 
 	<!--==================== MAIN ====================-->
@@ -137,6 +118,11 @@
 		<!--====================== PROJECTS ======================-->
 		<div class="content">
 			<div class="container">
+				<div class="search">
+					<input class="search-form__input" id="input" type="text" placeholder="Search" />
+					<button class="search-form__button-reset js-visibility-hidden" id="resetButton" />
+					<button class="search-form__button-loupe" id="searchIcon" />
+				</div>
 				<section class="projects__section">
 					<div class="projects__wrapper"></div>
 				</section>
