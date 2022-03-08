@@ -37,33 +37,6 @@ window.addEventListener("DOMContentLoaded", () => {
 		}
 
 		blocksArray.map(block => {
-			// let projectsItem = document.createElement("a");
-			// projectsItem.href = "#";
-			// projectsItem.className = "projects__item";
-
-			// let projectIcon = document.createElement("div");
-			// projectIcon.className = "project__icon";
-
-			// let img = document.createElement("img");
-			// img.src = block.icon;
-			// img.alt = "project";
-			// img.className = "project__icon-img";
-
-			// let projectText = document.createElement("div");
-			// projectText.className = "project__text";
-
-			// let h3 = document.createElement("h4");
-			// h3.innerHTML = block.name;
-
-			// let p = document.createElement("p");
-			// p.innerHTML = block.description;
-
-			// projectsItem.append(projectIcon);
-			// projectIcon.append(img);
-			// projectsItem.append(projectText);
-			// projectText.append(h3);
-			// projectText.append(p);
-			// projectsContent.append(projectsItem);
 			projectsContent.innerHTML += `
 				<a class="projects__item" href="#">
 					<div class="project__icon">
@@ -83,6 +56,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	//====================== mobile menu listeners ======================
 
 	const mobileNav = document.querySelector(".nav__mobile-items"),
+		mobileNavContainer = document.querySelector(".nav__mobile-container"),
 		hamburger = document.querySelector(".nav__mobile-hamburger"),
 		mobileNavClose = document.querySelector(".nav__mobile-close");
 
@@ -97,9 +71,27 @@ window.addEventListener("DOMContentLoaded", () => {
 		hamburger.classList.remove("js-display-none");
 		hamburger.classList.add("js-display-block");
 		mobileNavClose.classList.toggle("js-display-block");
+
+		// let mobWhy = document.getElementById("mobile-why-items");
+		// mobWhy.classList.add("js-display-none");
+
+		// let mobLearn = document.getElementById("mobile-learn-items");
+		// mobLearn.classList.add("js-display-none");
+
+		// let mobProject = document.getElementById("mobile-project-items");
+		// mobProject.classList.add("js-display-none");
+
+		// let mobCommunity = document.getElementById("mobile-community-items");
+		// mobCommunity.classList.add("js-display-none");
+
+		// for (let elem of document.getElementsByClassName("mobile-nav-arrow")) {
+		// 	if (elem.classList.contains("flipped")) {
+		// 		elem.classList.remove("flipped");
+		// 	}
+		// }
 	});
 
-	mobileNav.onclick = e => {
+	mobileNavContainer.onclick = e => {
 		let target = e.target;
 		let parent = target.closest(".mobile-category");
 		parent.querySelector(".mobile-nav-arrow").classList.toggle("flipped");
